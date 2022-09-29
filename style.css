@@ -31,11 +31,51 @@
     left: 100px;
     color: white;
 }
-h2{
-    color: white;
-}
+
 input{
     height: 27px;
+}
+button {
+  border: none;
+  color: rgb(14, 13, 13);
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.button1{
+  padding: 10px 60px;
+  position: absolute;
+  top: 590px;
+  left: 845px;
+}
+.button2{
+  padding: 10px 59px;
+  position: absolute;
+  top: 630px;
+  left: 845px;
+}
+.button3{
+  padding: 10px 40px;
+  position: absolute;
+  top: 670px;
+  left: 845px;
+}
+.button4{
+  padding: 10px 40px;
+  position: absolute;
+  top: 455px;
+  left: 1670px;
+}
+.button5{
+  padding: 10px 40px;
+  position: absolute;
+  top: 455px;
+  left: 1500px;
+}
+.main select{
+    width: 173px;
 }
 .main h4{
     position: absolute;
@@ -59,7 +99,7 @@ input{
     border: 2px solid #fcfcfc;
     padding: 20px;
     width: 370px;
-    height: 490px;
+    height: 495px;
     position: absolute;
     top: 220px;
     left: 725px;
@@ -80,7 +120,7 @@ input{
   }
 .b1{
     border-left: 2px solid rgb(255, 255, 255);
-    height: 533px;
+    height: 330px;
     position: absolute;
     left: 48.6%;
     margin-left: -3px;
