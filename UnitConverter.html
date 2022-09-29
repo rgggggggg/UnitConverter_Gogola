@@ -1,14 +1,81 @@
 
 <html>
-<head>
-    <title>Convert Your Measurements Online</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="main">
-        <img src="logo.png" class="logo">
-        <h1>Unit Converter</h1>
-    </div>
+    <head>
+        <meta charset="UFT-8">
+        <title>Convert Measurements Online</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="main">
+            <img src="logo.png" class="logo">
+            <h1>Unit Converter</h1>
+            <p> Choose from a selected types of unit of measurements to be converted with ease. Category ranging from weight, speed, distance, length and temperature.
+                Get the accurate conversion quickly and easily with the use of this system. With the addition of a BMI Calculator for calculating your 
+                BMI using your height and weight to help you know your own category. </p>
+            <div class="box1" ></div>
+            <div class="box2" ></div>
+            <div class="b1" ></div>
+            <div class="hr1" ></div>
+            <div class="hr2" ></div>
+            <h4>Legend : </h4>
+            <img src="bmi.png" class="bmi">
     
-</body>
-</html>
+            <form action="#">
+                <div style="position:absolute; left:742px; top:265px">
+                    <label for="input">Input:</label><br>
+                </div>
+                <div style="position:absolute; left:742px; top:300px">
+                    <input type="number" id="num" name="num" placeholder="Type here-">
+                </div>
+                <div style="position:absolute; left:1470px; top:265px">
+                    <label>Height:</label><br>
+                </div>
+                <div style="position:absolute; left:1470px; top:300px;">
+                    <input type="number" id="ft" name="ft" style="width:85px" placeholder="feet(ft)-">
+                </div>
+                <div style="position:absolute; left:1565px; top:300px;">
+                    <input type="number" id="inch" name="inch" style="width:100px" placeholder="inch-">
+                </div>
+                <div style="position:absolute; left:1700px; top:265px">
+                    <label for="lbs">Weight:</label><br>
+                </div>
+                <div style="position:absolute; left:1700px; top:300px">
+                    <input type="number" id="lbs" name="lbs" placeholder="pound(lbs)-">
+                </div>
+                
+            </form>
+    
+            <div style="position:absolute; left:945; top:265px">
+                <label for="result">Result:</label><br>
+            </div>
+            <div style="position:absolute; left:945px; top:300px">
+                <input type="number" id="result" name="result" readonly>
+            </div>
+            <div style="position:absolute; left:1500px; top:420px">
+                <h2>Your BMI: </h2>
+            </div>
+            
+            <!--
+                <select name="languages" id="lang">
+                <option value="select">Select a Language</option>
+                <option value="javascript">JavaScript</option>
+                <option value="php">PHP</option>
+                <option value="java">Java</option>
+                <option value="golang">Golang</option>
+                <option value="python">Python</option>
+                <option value="c#">C#</option>
+                <option value="C++">C++</option>
+                <option value="erlang">Erlang</option>
+              </select>
+            <select name="l" id="lang"></select>
+            -->
+            
+    
+        </div>
+        
+    
+        <script src="main.js"></script>
+    
+        
+    </body>
+    </html>
