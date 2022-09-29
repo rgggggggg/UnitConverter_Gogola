@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 .main{
     width: 100%;
@@ -15,12 +15,93 @@
     height: 6%;
     opacity: 0.8;
     position: absolute;
-    top: 50px;
+    top: 200px;
     left: 30px;
+}
+.bmi{
+    width: 16%;
+    height: 21%;
+    position: absolute;
+    top: 550px;
+    left: 1528px;
 }
 .main h1{
     position: absolute;
-    top: 60px;
+    top: 210px;
     left: 100px;
     color: white;
 }
+h2{
+    color: white;
+}
+input{
+    height: 27px;
+}
+.main h4{
+    position: absolute;
+    top: 705px;
+    left: 1455px;
+    color: white;
+}
+.main p{
+    border: 2px solid rgb(155, 155, 155);
+    padding: 20px;
+    margin: 10px;
+    width: 175px;
+    font-family: "Lucida Console", "Courier New", monospace;
+    color: white;
+    position: absolute;
+    top: 300px;
+    left: 50px;
+}
+.box1 {
+    border-radius: 25px;
+    border: 2px solid #fcfcfc;
+    padding: 20px;
+    width: 370px;
+    height: 490px;
+    position: absolute;
+    top: 220px;
+    left: 725px;
+  }
+.box2 {
+    border-radius: 25px;
+    border: 2px solid #fcfcfc;
+    padding: 20px;
+    width: 400px;
+    height: 260px;
+    position: absolute;
+    top: 220px;
+    left: 1450px;
+  }
+  label{
+    color: rgb(255, 255, 255);
+    font-family: "Lucida Console", "Courier New", monospace;
+  }
+.b1{
+    border-left: 2px solid rgb(255, 255, 255);
+    height: 533px;
+    position: absolute;
+    left: 48.6%;
+    margin-left: -3px;
+    top: 220;
+  }
+.hr1{
+    border-top: 2px solid rgb(255, 255, 255);
+    width: 414px;
+    position: absolute;
+    top: 350px;
+    left: 725px;
+  }
+.hr2{
+    border-top: 2px solid rgb(255, 255, 255);
+    width: 442px;
+    position: absolute;
+    top: 350px;
+    left: 1450px;
+  }
+  .user{
+    position: absolute;
+    top: 300px;
+    left: 200px;
+  }
