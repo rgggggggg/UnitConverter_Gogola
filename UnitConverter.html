@@ -9,17 +9,19 @@
         <div class="main">
             <img src="logo.png" class="logo">
             <h1>Unit Converter</h1>
-            <p> Choose from a selected types of unit of measurements to be converted with ease. Category ranging from weight, speed, distance, length and temperature.
+            <p> Choose from a selected types of unit of measurements to be converted with ease. Category ranging from weight, length and temperature.
                 Get the accurate conversion quickly and easily with the use of this system. With the addition of a BMI Calculator for calculating your 
                 BMI using your height and weight to help you know your own category. </p>
             <div class="box1" ></div>
             <div class="box2" ></div>
             <div class="b1" ></div>
             <div class="hr1" ></div>
+            <div class="hr1" style="position:absolute; left:725px; top:550px"></div>
             <div class="hr2" ></div>
             <h4>Legend : </h4>
             <img src="bmi.png" class="bmi">
-    
+            
+            <!--Input-->
             <form action="#">
                 <div style="position:absolute; left:742px; top:265px">
                     <label for="input">Input:</label><br>
@@ -31,51 +33,147 @@
                     <label>Height:</label><br>
                 </div>
                 <div style="position:absolute; left:1470px; top:300px;">
-                    <input type="number" id="ft" name="ft" style="width:85px" placeholder="feet(ft)-">
-                </div>
-                <div style="position:absolute; left:1565px; top:300px;">
-                    <input type="number" id="inch" name="inch" style="width:100px" placeholder="inch-">
+                    <input type="number" id="cm" name="cm"  placeholder="centimeter(cm)-">
                 </div>
                 <div style="position:absolute; left:1700px; top:265px">
                     <label for="lbs">Weight:</label><br>
                 </div>
                 <div style="position:absolute; left:1700px; top:300px">
-                    <input type="number" id="lbs" name="lbs" placeholder="pound(lbs)-">
+                    <input type="number" id="lbs" name="lbs" placeholder="kilogram(kg)-">
                 </div>
-                
             </form>
-    
+            <!--Result-->
             <div style="position:absolute; left:945; top:265px">
                 <label for="result">Result:</label><br>
             </div>
             <div style="position:absolute; left:945px; top:300px">
                 <input type="number" id="result" name="result" readonly>
             </div>
-            <div style="position:absolute; left:1500px; top:420px">
-                <h2>Your BMI: </h2>
+            <div style="position:absolute; left:1510px; top:390px; color:rgb(255, 255, 255);">
+                <h2>Your BMI : </h2>
             </div>
-            
-            <!--
-                <select name="languages" id="lang">
-                <option value="select">Select a Language</option>
-                <option value="javascript">JavaScript</option>
-                <option value="php">PHP</option>
-                <option value="java">Java</option>
-                <option value="golang">Golang</option>
-                <option value="python">Python</option>
-                <option value="c#">C#</option>
-                <option value="C++">C++</option>
-                <option value="erlang">Erlang</option>
-              </select>
-            <select name="l" id="lang"></select>
-            -->
-            
-    
+            <div style="position:absolute; left:1680px; top:390px; color:rgb(184, 170, 170);">
+                <h2 id="resultText">(result here)</h2>
+            </div>
+             <!--Button/Types-->
+            <button type="button" onclick="showL(); reset();"  class="button1">Length</button>
+            <button type="button" onclick="showW(); reset();"  class="button2">Weight</button>
+            <button type="button" onclick="showD(); reset();"  class="button3">Temperature</button>
+            <button type="button" class="button4">Save Result</button>
+            <button type="button" class="button5">Get Result</button>
+             <!--Options-->
+            <div style="position:absolute; left:742; top:400px">
+                <select name="length1" id="len1" >
+                    <option value="kilometer">Kilometer(km)</option>
+                    <option value="mile">Mile(mi.)</option>
+                    <option value="meter">Meter(m)</option>
+                    <option value="foot">Foot(ft)</option>
+                    <option value="inch">Inch(inch")</option>
+                </select>
+            </div>
+            <div style="position:absolute; left:945; top:400px">
+                <select name="length2" id="len2" >
+                    <option value="kilometer">Kilometer(km)</option>
+                    <option value="mile">Mile(mi.)</option>
+                    <option value="meter">Meter(m)</option>
+                    <option value="foot">Foot(ft)</option>
+                    <option value="inch">Inch(inch")</option>
+                </select>
+            </div>
+
+            <div style="position:absolute; left:742; top:400px">
+                <select name="weight1" id="wei1" >
+                    <option value="kilogram">Kilogram(kg)</option>
+                    <option value="gram">Gram(g)</option>
+                    <option value="miligram">Miligram(mg)</option>
+                    <option value="pound">Pound(lbs)</option>
+                </select>
+            </div>
+            <div style="position:absolute; left:945; top:400px">
+                <select name="weight2" id="wei2" >
+                    <option value="kilogram">Kilogram(kg)</option>
+                    <option value="gram">Gram(g)</option>
+                    <option value="miligram">Miligram(mg)</option>
+                    <option value="pound">Pound(lbs)</option>
+                </select>
+            </div>
+
+            <div style="position:absolute; left:742; top:400px">
+                <select name="temp1" id="tem1">
+                    <option value="celsuis">Celsuis(°C)</option>
+                    <option value="kelvin">Kelvin(K)</option>
+                    <option value="fahrenheit">Fahrenheit(°F)</option>
+                </select>
+            </div>
+            <div style="position:absolute; left:945; top:400px">
+                <select name="temp2" id="tem2" >
+                    <option value="celsuis">Celsuis(°C)</option>
+                    <option value="kelvin">Kelvin(K)</option>
+                    <option value="fahrenheit">Fahrenheit(°F)</option>
+                </select>
+            </div>
+
         </div>
-        
-    
+        <!--Hide/Show-->
+        <script>
+
+            var l1 = document.getElementById("len1");
+            var l2 = document.getElementById("len2");
+            var w1 = document.getElementById("wei1");
+            var w2 = document.getElementById("wei2");
+            var t1 = document.getElementById("tem1");
+            var t2 = document.getElementById("tem2");
+
+            function showL() {
+
+                w1.style.display = "none";
+                w2.style.display = "none";
+                t1.style.display = "none";
+                t2.style.display = "none";
+
+            if (l1.style.display && l2.style.display  === "none") {
+                l1.style.display = "block";
+                l2.style.display = "block";        
+            }
+            }
+            function showW() {
+
+                t1.style.display = "none";
+                t2.style.display = "none";
+                l1.style.display = "none";
+                l2.style.display = "none";
+
+            if (w1.style.display && w2.style.display  === "none") {
+                w1.style.display = "block";
+                w2.style.display = "block";  
+            }
+            }
+            function showD() {
+
+                l1.style.display = "none";
+                l2.style.display = "none";
+                w1.style.display = "none";
+                w2.style.display = "none";
+
+            if (t1.style.display && t2.style.display  === "none") {
+                t1.style.display = "block";
+                t2.style.display = "block";    
+            }
+            }
+
+            function reset(){
+                document.getElementById("num").value = "";
+                document.getElementById("result").value = "";
+            }
+
+
+            function calculateBmi(){
+                document.getElementById('resultText').innerHTML = lbs.value/cm.value/; 
+            }
+
+            
+        </script>
         <script src="main.js"></script>
-    
-        
+
     </body>
     </html>
